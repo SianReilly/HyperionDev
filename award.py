@@ -17,7 +17,7 @@
 # Elif participant's total_time is >=101 and <=105 mins = print("The participant has been awarded Provincial Half Colours")
 # Elif participant's total_time is >=106 and <=110 mins = print("The participant has been awarded Provincial Scroll")
 # Else participant's total_time is >110 mins = print("The participant has no award")
-
+import matplotlib.pyplot as plt
 
 # Practical Task 1:
 # Assigning the variables, casting them into integers for the calculation
@@ -34,6 +34,22 @@ total_time = (swimming_time + cycling_time + running_time)
 
 # Displaying the total participant triathlon time using an f string
 print(f"The participants' total triathlon race time is {total_time}")
+
+
+# Create lists for labels and corresponding times
+events = ['Swimming', 'Cycling', 'Running']
+times = [swimming_time, cycling_time, running_time]
+
+# Plotting the times for each event
+plt.bar(events, times, color=['blue', 'green', 'red'])
+
+# Adding labels
+plt.xlabel('Events')
+plt.ylabel('Time (minutes)')
+plt.title('Triathlon Event Times')
+
+# Display the chart
+plt.show()
 
 # Creating an if-elif-else statement to determine the partipant's award
 # The if-elif-else statement uses both comparison (<=, >=) and logical conjunction (and) operators
