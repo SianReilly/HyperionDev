@@ -17,8 +17,6 @@
 # Elif participant's total_time is >=101 and <=105 mins = print("The participant has been awarded Provincial Half Colours")
 # Elif participant's total_time is >=106 and <=110 mins = print("The participant has been awarded Provincial Scroll")
 # Else participant's total_time is >110 mins = print("The participant has no award")
-<virtual_environment_name>\Scripts\activate
-pip install matplotlib
 import matplotlib.pyplot as plt
 
 # Practical Task 1:
