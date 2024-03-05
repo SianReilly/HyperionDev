@@ -25,6 +25,10 @@ swimming_time = int(input("Please enter your swimming race time in minutes)."))
 cycling_time = int(input("Please enter your cycling race time in minutes)."))
 running_time = int(input("Please enter your running race time in minutes)."))
 
+swimming_injury = bool(input("Do you have a swimming injury? Please enter 'True' or 'False'.)."))
+cycling_injury = bool(input("Do you have a cycling injury? Please enter 'True' or 'False')."))
+running_injury = bool(input("Do you have a running injury? Please enter 'True' or 'False')."))
+
 # Calculating the total participant triathlon time
 total_time = (swimming_time + cycling_time + running_time)
 
@@ -41,3 +45,24 @@ elif total_time >=106 and total_time <=110:
     print("The participant has been awarded Provincial Scroll")
 else:
     print("The participant has no award")
+
+
+if swimming_injury and cycling_injury and running_injury:
+    print("Please see Nick Murch, Richard Freeman, and  George A. Sheehan for treatment.")
+
+elif swimming_injury and cycling_injury:
+    print("Please see Nick Murch and Richard Freeman for treatment.")
+elif swimming_injury and running_injury:
+    print("Please see Nick Murch and Richard Freeman for treatment.")
+elif running_injury and cycling_injury:
+    print("Please see George A. Sheehan and Richard Freeman for treatment.")
+    
+elif cycling_injury:
+    print("Please see Richard Freeman for treatment")
+elif running_injury:
+    print("Please see George A. Sheehan for treatment")
+elif swimming_injury:
+    print("Please see Nick Murch for treatment")
+
+else:
+    print("You do not require any treatment! Onto the next race :)")
