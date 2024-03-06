@@ -17,7 +17,6 @@
 # Elif participant's total_time is >=101 and <=105 mins = print("The participant has been awarded Provincial Half Colours")
 # Elif participant's total_time is >=106 and <=110 mins = print("The participant has been awarded Provincial Scroll")
 # Else participant's total_time is >110 mins = print("The participant has no award")
-import matplotlib.pyplot as plt
 
 # Practical Task 1:
 # Assigning the variables, casting them into integers for the calculation
@@ -29,27 +28,16 @@ swimming_injury = bool(input("Do you have a swimming injury? Please enter 'True'
 cycling_injury = bool(input("Do you have a cycling injury? Please enter 'True' or 'False')."))
 running_injury = bool(input("Do you have a running injury? Please enter 'True' or 'False')."))
 
+nationality = str(input("""Please enter which region you represent from this list in order to be assigned the correct interview: 
+                        England, Northern Ireland, Republic of Ireland, Scotland or Wales)."""))
+
+
 # Calculating the total participant triathlon time
 total_time = (swimming_time + cycling_time + running_time)
 
 # Displaying the total participant triathlon time using an f string
 print(f"The participants' total triathlon race time is {total_time}")
 
-
-# Create lists for labels and corresponding times
-events = ['Swimming', 'Cycling', 'Running']
-times = [swimming_time, cycling_time, running_time]
-
-# Plotting the times for each event
-plt.bar(events, times, color=['blue', 'green', 'red'])
-
-# Adding labels
-plt.xlabel('Events')
-plt.ylabel('Time (minutes)')
-plt.title('Triathlon Event Times')
-
-# Display the chart
-plt.show()
 
 # Creating an if-elif-else statement to determine the partipant's award
 # The if-elif-else statement uses both comparison (<=, >=) and logical conjunction (and) operators
@@ -82,3 +70,17 @@ elif swimming_injury:
 
 else:
     print("You do not require any treatment! Onto the next race :)")
+
+
+if nationality == "England":
+    print("Please attend the BBC interview at 4pm on the 11th May")
+elif nationality == "Northern Ireland":
+    print("Please attend the UTV interview at 1pm on the 11th May")
+elif nationality == "Republic of Ireland":
+    print("Please attend the RTÉ One interview at 2pm on the 11th May")
+elif nationality == "Wales":
+    print("Please attend the BBC Cymru Wales interview at 11am on the 11th May")
+elif nationality == "Scotland":
+    print("Please attend the STV interview at 10am on the 11th May")
+else:
+    print("You entered an invalid response, please repeat the question.")
