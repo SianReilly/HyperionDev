@@ -43,6 +43,12 @@ print(f"The participants' total triathlon race time is {total_time}")
 # The if-elif-else statement uses both comparison (<=, >=) and logical conjunction (and) operators
 if total_time >=0 and total_time <=100:
     print("The participant has been awarded Provincial Colours")
+    # Draw a star image if awarded Provincial Colours
+    print("   *   ")
+    print(" *   * ")
+    print("*******")
+    print(" *   * ")
+    print("   *   ")
 elif total_time >=101 and total_time <=105:
     print("The participant has been awarded Provincial Half Colours")
 elif total_time >=106 and total_time <=110:
@@ -73,14 +79,14 @@ else:
 
 
 if nationality == "England":
-    print("Please attend the BBC interview at 4pm on the 11th May")
+    print("Please attend the BBC interview at 4pm on the 11th May.")
 elif nationality == "Northern Ireland":
-    print("Please attend the UTV interview at 1pm on the 11th May")
+    print("Please attend the UTV interview at 1pm on the 11th May.")
 elif nationality == "Republic of Ireland":
-    print("Please attend the RTÉ One interview at 2pm on the 11th May")
+    print("Please attend the RTÉ One interview at 2pm on the 11th May.")
 elif nationality == "Wales":
-    print("Please attend the BBC Cymru Wales interview at 11am on the 11th May")
+    print("Please attend the BBC Cymru Wales interview at 11am on the 11th May.")
 elif nationality == "Scotland":
-    print("Please attend the STV interview at 10am on the 11th May")
+    print("Please attend the STV interview at 10am on the 11th May.")
 else:
     print("You entered an invalid response, please repeat the question.")
